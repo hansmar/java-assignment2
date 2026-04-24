@@ -11,6 +11,7 @@ public class SentenceAnalyzer {
    public void analyze() {
       ArrayList<String> list = new ArrayList<String>();
 
+      // Walk through each paragraph and split on sentence-ending punctuation.
       for (int i = 0; i < paragraphs.length; i++) {
          String[] parts = paragraphs[i].split("[.!?]+");
 
