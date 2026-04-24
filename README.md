@@ -9,6 +9,7 @@ Run `Assignment2.java` using the run button.
 
 ### In Terminal
 Compile: javac Assignment2.java
+
 Run: java Assignment2
 
 
