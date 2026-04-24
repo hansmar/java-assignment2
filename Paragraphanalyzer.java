@@ -1,4 +1,4 @@
-// ParagraphAnalyzer.java
+import java.util.ArrayList;
 
 public class ParagraphAnalyzer {
    private String text;
@@ -9,8 +9,20 @@ public class ParagraphAnalyzer {
    }
 
    public void analyze() {
-      // split on double newline
-      paragraphs = text.split("\n\n");
+      String[] parts = text.split("\n\n");
+
+      ArrayList<String> list = new ArrayList<String>();
+      for (int i = 0; i < parts.length; i++) {
+         String trimmed = parts[i].trim();
+         if (trimmed.length() > 0) {
+            list.add(trimmed);
+         }
+      }
+
+      paragraphs = new String[list.size()];
+      for (int i = 0; i < list.size(); i++) {
+         paragraphs[i] = list.get(i);
+      }
    }
 
    public String[] getParagraphs() {
